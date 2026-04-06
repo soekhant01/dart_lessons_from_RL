@@ -28,7 +28,7 @@ double doubleValue = 2.5;
 
   num a  = 4;
   if(a is int){
-    print('a is integer')
+    print("a is integer");
   }
 
 }
