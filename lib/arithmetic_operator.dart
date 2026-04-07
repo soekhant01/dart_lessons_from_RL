@@ -15,4 +15,5 @@ void main(){
 
   print("it will return integer value ${b ~/ a}"); // Divide, returning an integer result
 
+  print("modulo is ${a % b}");
 }
