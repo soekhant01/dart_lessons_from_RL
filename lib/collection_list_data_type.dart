@@ -17,25 +17,27 @@ void main() {
   emptyList.add(1);
   emptyList.add(2);
   emptyList.add("hello");
-  emptyList.add(true);
+  // emptyList.add(true);
   emptyList.add(4);
   emptyList.add(7);
   print("Length is ${emptyList.length}");
 
   emptyList = emptyList.reversed.toList();
 
-  // map function
-  emptyList = emptyList.map((number) {
+  // map() function (immutability), this method do not modify the original collection, return a new one
+  var newList = emptyList.map((number) {
     if (number is int) {
       return number * 2;
     }
     return number;
   }).toList();
 
+  print("New List is $newList");
+
   // where function, it is like filter
 
-  emptyList = emptyList.where((e) => (e is int && e.isEven)).toList();
-  print(emptyList);
+  var whereList = emptyList.where((e) => (e is int && e.isEven)).toList();
+  print("whereList is $whereList");
 
   emptyList.sort();
   print(emptyList);
@@ -47,4 +49,7 @@ void main() {
   print(stringList);
   stringList.removeAt(1);
   print(stringList);
+
+  intList.remove(1);
+  print(intList);
 }
