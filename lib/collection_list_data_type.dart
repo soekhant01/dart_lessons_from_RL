@@ -39,9 +39,9 @@ void main() {
   var whereList = emptyList.where((e) => (e is int && e.isEven)).toList();
   print("whereList is $whereList");
 
-  emptyList.sort();
-  print(emptyList);
-
+  // emptyList.sort();
+  // print(emptyList);
+  //
   stringList.sort();
   print(stringList);
 
@@ -52,4 +52,14 @@ void main() {
 
   intList.remove(1);
   print(intList);
+
+  //   list spread operator
+  List numListOne = [1, 2, 3, 4];
+  List strList = ["hello","hi"];
+  List numListTwo = [5, 6, 7, 8,...numListOne,...strList];
+
+  print("Number list with spread operator $numListTwo");
+
+   numListOne.addAll(numListTwo);
+   print(numListOne);
 }
